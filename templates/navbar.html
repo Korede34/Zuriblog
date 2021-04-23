@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand font-weight-bold text-dark h3" href="{% url 'post-list' %}">ZURIBLOG</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        {% if request.user.is_authenticated %}
+          <li class='nav-link'>
+            <p class='font-weight-bold text-dark'>{{request.user.username|title}}</p>
+          </li>
+          <a class="nav-link"href="{% url 'post-create' %}"><p class='font-weight-bold text-dark'>Create</p></a>
+          <a href="{% url 'logout' %}"><input type="submit" class='btn btn-light px-3' value='Logout'></a>
+          
+        {% elif not request.user.is_authenticated %}
+          <a class="nav-link"href="{% url 'signup' %}"><p class='font-weight-bold text-dark'>SignUp</p></a>
+          <a href="{% url 'login' %}"><input type="submit" class='btn btn-light px-3' value='Login'></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</nav>

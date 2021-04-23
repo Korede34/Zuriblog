@@ -1,0 +1,38 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+i.icon{
+    color: rgb(204, 197, 211);
+}
+
+i.arr{
+    color: rgb(2, 2, 2);
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+i.ar{
+    color: rgb(2, 2, 2);
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+p.description{
+    color: rgb(28, 28, 29);
+}
+
+p a{
+    color: rgb(119, 47, 190);
+}
+
+h5{
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    max-width: 40%;
+    height: auto;
+}
