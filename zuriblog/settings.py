@@ -8,7 +8,7 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
+READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=True)
 
 if READ_DOT_ENV_FILE:
     environ.Env.read_env()
@@ -16,6 +16,7 @@ if READ_DOT_ENV_FILE:
 DEBUG = env('DEBUG')
 SECRET_KEY = env('SECRET_KEY')
 
+DEBUG_PROPAGATE_EXCEPTIONS = True
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
